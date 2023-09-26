@@ -1,0 +1,47 @@
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023$ cd 02_Multifile
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ls
+const.c  fun.c  Makefile  outlib.h  prog.c
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ make
+cc -ggdb -o0 -fPIC   -c -o prog.o prog.c
+cc -ggdb -o0 -fPIC   -c -o const.o const.c
+cc -ggdb -o0 -fPIC   -c -o fun.o fun.c
+cc   prog.o const.o fun.o   -o prog
+./prog 2> README
+ar -cr liboutput_static.a fun.o const.o
+cc prog.o liboutput_static.a -o prog-a
+cc -shared fun.o const.o -o liboutput.so
+cc prog.o liboutput.so -o prog-so
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog 2>test00err.txt 1>test00.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-a 2>test10err.txt 1>test10.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-so 2>test20err.txt 1>test20.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog 1 2>test01err.txt 1>test01.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-a 1 2>test11err.txt 1>test11.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-so 1 2>test21err.txt 1>test21.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog 1 2 3 2>test02err.txt 1>test02.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-a 1 2 3 2>test12err.txt 1>test12.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ./prog-so 1 2 3 2>test22err.txt 1>test22.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test00.txt test10.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test00.txt test20.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test00err.txt test10err.txt
+test00err.txt test10err.txt 不同：第 7 字节，第 1 行
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test00err.txt test20err.txt
+test00err.txt test20err.txt 不同：第 7 字节，第 1 行
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test01.txt test11.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test01.txt test21.txt
+cmp：test21.txt 已结束且为空
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test01err.txt test11err.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test01err.txt test21err.txt
+cmp：test01err.txt 已结束且为空
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test02.txt test12.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test02.txt test22.txt
+cmp：test22.txt 已结束且为空
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test02err.txt test12err.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ cmp test02err.txt test22err.txt
+cmp：test02err.txt 已结束且为空
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ make clean
+rm -f *.o *~ o.* README prog prog-a prog-so liboutput_static.a liboutput.so
+rm -f *.txt
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ ls
+const.c  fun.c  Makefile  outlib.h  prog.c
+menglq@menglq-ThinkPad-L14-Gen-1:~/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/02_Multifile$ 
+
