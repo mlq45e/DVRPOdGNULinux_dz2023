@@ -34,12 +34,9 @@ int esub_help1(char* ar[])
 	{
 		if(i==rgm.rm_so)
 		{
-			int slashflag = 0;
 			while(j-i!=strlen(ar[2]))
 			{
 				res[j] = ar[2][j-i];
-				if(ar[2][j-i]=='\\'&&slashflag) {j--; slashflag=0;}
-				if(ar[2][j-i]=='\\'&&!slashflag) {slashflag++;}
 				j++;
 			}
 			i = rgm.rm_eo;
@@ -59,12 +56,11 @@ char* esub_takeOneRg(char* ar)
 {
 	char* res = (char*)calloc(strlen(ar),sizeof(char));
 	int cnt_s = 0, i = 0, j = 0;
-	while((ar[i]!='\0')&&(ar[i]!=')'||cnt_s!=1))
+	while((ar[i]!=')'||cnt_s!=1)&&(ar[i]!='\0'))
 	{
-		if((i!=0)&&(ar[i-1]=='\\')&&((ar[i]=='(')||(ar[i]==')'))) {res[j] = ar[i]; j++; i++;}
-		else if(ar[i]=='(') {cnt_s++; i++;}
+		if(ar[i]=='(') {cnt_s++; i++;}
 		else if(ar[i]==')') {cnt_s--; i++;}
-		//~ else if((ar[i]=='\\')&&(ar[i+1]!='\0')&&((ar[i+1]=='(')||(ar[i+1]==')'))) {i++;}
+		else if((ar[i]=='\\')&&(ar[i+1]!='\0')&&((ar[i+1]=='(')||(ar[i+1]==')'))) {i++;}
 		else {res[j] = ar[i]; j++; i++;}
 	}
 	return res;
@@ -131,9 +127,7 @@ int esub_helpMany(int expr, char* ar[])
 	i=0;
 	for(i=0;i<strlen(ar[2]);i++)
 	{
-		if(ar[2][i]=='\\'&&i!=strlen(ar[2])-1&&ar[2][i+1]=='\\') continue;
-		else if((i!=0&&ar[2][i]=='\\'&&i!=strlen(ar[2])-1&&ar[2][i+1]>='1'&&ar[2][i+1]<='9'&&ar[2][i-1]!='\\')
-			||(i==0&&ar[2][i]=='\\'&&i!=strlen(ar[2])-1&&ar[2][i+1]>='1'&&ar[2][i+1]<='9'))
+		if(ar[2][i]=='\\'&&i!=strlen(ar[2])-1&&ar[2][i+1]>='1'&&ar[2][i+1]<='9')
 		{
 			for(j=(rgm+(ar[2][i+1]-'1')*BAGSMAX)->rm_so;j<(rgm+(ar[2][i+1]-'1')*BAGSMAX)->rm_eo;j++)
 			{
@@ -173,12 +167,12 @@ int main(int argc, char* argv[])
 	int cnt_s = 0, cnt_e = 0, i = 0;
 	for(i=0;argv[1][i]!='\0';i++)
 	{
-		if(argv[1][i]=='(') {cnt_s++;}
-		else if(argv[1][i]==')') {cnt_s--; if(argv[1][i-1]!='\\') cnt_e++;}
+		if(argv[1][i]=='{') {argv[1][i]='('; cnt_s++;}
+		else if(argv[1][i]=='}') {argv[1][i]=')'; cnt_s--; cnt_e++;}
+		else if(argv[1][i]=='(') {cnt_s++;}
+		else if(argv[1][i]==')') {cnt_s--; cnt_e++;}
 		if(cnt_s<0) {printf("!!!parentheses error\n"); return -2;}
 	}
-	int j = 0;
-	char* tmpsubst = (char*)calloc(strlen(argv[2]),sizeof(char));
 	if(cnt_e<1) return esub_help1(argv);
 	else return esub_helpMany(cnt_e, argv);
 	
