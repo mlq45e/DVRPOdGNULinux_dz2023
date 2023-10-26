@@ -1,0 +1,1 @@
+./move: error while loading shared libraries: /lib/x86_64-linux-gnu/libc.so.6: cannot read file data: Cannot allocate memory

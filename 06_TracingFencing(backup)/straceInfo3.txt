@@ -1,0 +1,15 @@
+execve("./move", ["./move", "1.txt", "4.txt"], 0x7ffd3bc33830 /* 64 vars */) = 0
+brk(NULL)                               = 0x55adfaea0000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fff2adc0d90) = -1 EINVAL (无效的参数)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1d3d020000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=146711, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 146711, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1d3cffc000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, 0x7fff2adc0118, 832)            = -1 ENOMEM (无法分配内存) (INJECTED)
+close(3)                                = 0
+writev(2, [{iov_base="./move", iov_len=6}, {iov_base=": ", iov_len=2}, {iov_base="error while loading shared libra"..., iov_len=36}, {iov_base=": ", iov_len=2}, {iov_base="/lib/x86_64-linux-gnu/libc.so.6", iov_len=31}, {iov_base=": ", iov_len=2}, {iov_base="cannot read file data", iov_len=21}, {iov_base=": ", iov_len=2}, {iov_base="Cannot allocate memory", iov_len=22}, {iov_base="\n", iov_len=1}], 10) = 125
+exit_group(127)                         = ?
++++ exited with 127 +++
