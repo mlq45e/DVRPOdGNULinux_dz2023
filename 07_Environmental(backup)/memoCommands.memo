@@ -1,0 +1,12 @@
+no need {autoscan}: already prepared configure.ac
+all in memo.sh<-->{sh memo.sh}:
+{
+[aclocal]
+[autoheader]
+[autoconf]
+[automake --add-missing]
+[./configure [--with-readline]]
+[make]
+[make test]
+}
+make clean
