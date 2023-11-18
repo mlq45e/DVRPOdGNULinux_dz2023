@@ -1,0 +1,11 @@
+--- labyrint.c	2023-11-18 21:01:38.998051423 +0300
++++ labyrint_size.c	2023-11-18 21:07:36.469471674 +0300
+@@ -5,7 +5,7 @@
+ int main(int args, char* argv[])
+ {
+ 	//prepare
+-	int size = 6;
++	int size = atoi(argv[1]);
+ 	char wall = '#';
+ 	char space = '.';
+ 	//randomly generate

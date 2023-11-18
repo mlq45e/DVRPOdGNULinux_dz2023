@@ -1,0 +1,15 @@
+--- labyrint.c	2023-11-18 21:01:38.998051423 +0300
++++ labyrint_symbol.c	2023-11-18 21:08:27.509967718 +0300
+@@ -5,9 +5,9 @@
+ int main(int args, char* argv[])
+ {
+ 	//prepare
+-	int size = 6;
+-	char wall = '#';
+-	char space = '.';
++	int size = atoi(argv[2]);
++	char wall = argv[1][1];
++	char space = argv[1][0];
+ 	//randomly generate
+ 	srand(time(NULL));
+ 	int lbrnt[size][size];

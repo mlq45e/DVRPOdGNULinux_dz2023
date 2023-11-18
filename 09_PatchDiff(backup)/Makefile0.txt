@@ -1,0 +1,33 @@
+TRASH = labyrinth l1* l2* l3* labyrint_s.c
+
+all: labyrinth patch l1 l2 l3 test
+
+labyrinth: labyrint.c
+	cp $^ labyrint_s.c
+	cc $^ -o $@
+
+patch: labyrint_s.c l_size.patch l_symb.patch l_seed.patch
+	cp $< l1.c
+	cp $< l2.c
+	cp $< l3.c
+	patch l1.c < l_size.patch
+	patch l2.c < l_symb.patch
+	patch l3.c < l_seed.patch
+
+l1: l1.c patch
+	cc $< -o $@
+
+l2: l2.c patch
+	cc $< -o $@
+
+l3: l3.c patch
+	cc $< -o $@
+
+test: labyrinth l1 l2 l3
+	./$<
+	./l1 11
+	./l2 +# 6
+	./l3 42 ' .' 8
+
+clean:
+	rm -f $(TRASH)
