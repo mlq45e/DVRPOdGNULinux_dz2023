@@ -1,0 +1,125 @@
+# Russian translations for numMagician package.
+# Copyright (C) 2023 THE numMagician'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the numMagician package.
+# menglq <kostya45e@mail.ru>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: numMagician 0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-29 22:09+0300\n"
+"PO-Revision-Date: 2023-11-29 20:26+0300\n"
+"Last-Translator: menglq <kostya45e@mail.ru>\n"
+"Language-Team: Russian <gnu@d07.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: numMagician.c:40
+#, c-format
+msgid "\t\t\t...what is Roman Number? "
+msgstr "\t\t\t...-что такое римские число? "
+
+#: numMagician.c:99
+#, c-format
+msgid ":-(\n"
+msgstr "Ххх\n"
+
+#: numMagician.c:95
+#, c-format
+msgid "Be in awe! I'll ask you again, don't say irrelevant things\n"
+msgstr "Будьте аккуратно! Я спрошу тебя еще раз, не говори ненужных вещей\n"
+
+#: numMagician.c:41
+#, c-format
+msgid "I can't include a whole wikipedia page in --help. :) "
+msgstr "А что, весь сайт википедия надо? :) "
+
+#: numMagician.c:73
+#, c-format
+msgid "I'm a number magician! I know all secret of numbers!\n"
+msgstr "Я волшебник чисел! Я знаю всю тайну чисел!\n"
+
+#: numMagician.c:64
+#, c-format
+msgid "Is that number %d?[y/n]\n"
+msgstr "Oно равно %d?[да->y/нет->n]\n"
+
+#: numMagician.c:65
+#, c-format
+msgid "Is that number %s?[y/n]\n"
+msgstr "Oно равно %s?[да->y/нет->n]\n"
+
+#: numMagician.c:37
+#, c-format
+msgid "It's an interesting programme. "
+msgstr "Это интересная программа. "
+
+#: numMagician.c:87
+#, c-format
+msgid "It's larger or smaller than %d?[l/s]\n"
+msgstr "Оно больше(l) или меньше(s) %d?[l/s]\n"
+
+#: numMagician.c:86
+#, c-format
+msgid "It's larger or smaller than %s?[l/s]\n"
+msgstr "Оно больше(l) или меньше(s) %s?[l/s]\n"
+
+#: numMagician.c:58
+#, c-format
+msgid "Now please think of an integer between 1 and 100 and tell nobody.\n"
+msgstr "Теперь, пожалуйста, задумайте целое число от 1 по 100 и никому не говорите.\n"
+
+#: numMagician.c:57
+#, c-format
+msgid "Now please think of an integer between I and C and tell nobody.\n"
+msgstr "Теперь, пожалуйста, задумайте целое число от I по C и никому не говорите.\n"
+
+#: numMagician.c:39
+#, c-format
+msgid "Optional: -r to use Roman numbers.\n"
+msgstr "Возможно: -r чтобы смотреть римские числа.\n"
+
+#: numMagician.c:98
+#, c-format
+msgid "See you next time!\n"
+msgstr "Увидимся в следующий раз!\n"
+
+#: numMagician.c:42
+#, c-format
+msgid "So, find out yourselves.\n"
+msgstr "Сами ищите.\n"
+
+#: numMagician.c:36
+#, c-format
+msgid "What is number magician? "
+msgstr "Кто такое волшебник чисел? "
+
+#: numMagician.c:71
+#, c-format
+msgid "Within %d time! Miraculous me!\n"
+msgid_plural "Within %d times! Miraculous me!\n"
+msgstr[0] "Только %d раз! Чудесный я!\n"
+msgstr[1] "Только %d раза! Чудесный я!\n"
+msgstr[2] "Только %d раз! Чудесный я!\n"
+
+#: numMagician.c:69
+#, c-format
+msgid "Within %s time! Miraculous me!\n"
+msgid_plural "Within %s times! Miraculous me!\n"
+msgstr[0] "Только %s раз! Чудесный я!\n"
+msgstr[1] "Только %s раза! Чудесный я!\n"
+msgstr[2] "Только %s раз! Чудесный я!\n"
+
+#: numMagician.c:81
+#, c-format
+msgid "You are fooling me! I'm angry! Spell on you!\n"
+msgstr "Ты меня обманываешь! Я зол! Заклинаю на тебе!\n"
+
+#: numMagician.c:38
+#, c-format
+msgid "You can play a number guess game here.\n"
+msgstr "Можно играть гадать число.\n"

@@ -1,0 +1,4 @@
+numMagician.c: In function ‘main’:
+numMagician.c:99:49: warning: variable ‘scErr’ set but not used [-Wunused-but-set-variable]
+   99 |         int ub = 101, lb = 0, cnt = 1, foo = 0, scErr = 0;
+      |                                                 ^~~~~

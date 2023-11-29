@@ -1,0 +1,82 @@
+.TH "numMagician.c" 2 "2023年 十一月 29日 星期三" "Version 0.1" "number magician roman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+numMagician.c \- Main body program  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <libintl\&.h>\fP
+.br
+\fC#include <libgen\&.h>\fP
+.br
+\fC#include <locale\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_\fP(STRING)   gettext(STRING)"
+.br
+.RI "For translations "
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SS "变量"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBrmnm\fP []"
+.br
+.RI "Table of roman numbers from 1 to 100\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+Main body program 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define _(STRING)   gettext(STRING)"
+
+.PP
+For translations 
+.SH "函数说明"
+.PP 
+.SS "int main (int argc, char * argv[])"
+< For number style: arabic or roman
+.SH "变量说明"
+.PP 
+.SS "const char* rmnm[]"
+\fB初始值:\fP
+.PP
+.nf
+= {"N","I","II","III","IV","V","VI","VII","VIII","IX",
+    "X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI",
+    "XXII","XXIII","XXIV","XXV","XXVI","XXVII","XXVIII","XXIX","XXX","XXXI",
+    "XXXII","XXXIII","XXXIV","XXXV","XXXVI","XXXVII","XXXVIII","XXXIX","XL",
+    "XLI","XLII","XLIII","XLIV","XLV","XLVI","XLVII","XLVIII","XLIX","L","LI",
+    "LII","LIII","LIV","LV","LVI","LVII","LVIII","LIX","LX","LXI","LXII",
+    "LXIII","LXIV","LXV","LXVI","LXVII","LXVIII","LXIX","LXX","LXXI","LXXII",
+    "LXXIII","LXXIV","LXXV","LXXVI","LXXVII","LXXVIII","LXXIX","LXXX","LXXXI",
+    "LXXXII","LXXXIII","LXXXIV","LXXXV","LXXXVI","LXXXVII","LXXXVIII","LXXXIX",
+    "XC","XCI","XCII","XCIII","XCIV","XCV","XCVI","XCVII","XCVIII","XCIX","C"}
+.fi
+.PP
+Table of roman numbers from 1 to 100\&. Python roman is used to generate this array\&. 
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 number magician roman 的 源代码自动生成\&.

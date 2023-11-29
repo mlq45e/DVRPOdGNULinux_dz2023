@@ -1,0 +1,16 @@
+warning: The selected output language "chinese" has not been updated
+since release 1.8.15.  As a result some sentences may appear in English.
+
+/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/numMagician.c:51: warning: @copydetails or @copydoc target 'library' not found
+/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/numMagician.c:2: warning: @copydetails or @copydoc target 'library' not found
+/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/numMagician.c:2: warning: @copydetails or @copydoc target 'library' not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/latex/numMagician_8c__incl.dot" -Tpdf -o "/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/latex/numMagician_8c__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/html/numMagician_8c__incl.dot" -Tpng -o "/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/html/numMagician_8c__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/html/graph_legend.dot" -Tpng -o "/home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/html/graph_legend.png"'
+error: problems opening map file /home/menglq/wen2jian4/programming/gitRepo/DVRPOdGNULinux_dz2023/11_Documenting/doxygen/html/numMagician_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problem writing FIG 0 figure!

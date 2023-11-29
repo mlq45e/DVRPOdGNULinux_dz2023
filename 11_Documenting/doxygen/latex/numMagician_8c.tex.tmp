@@ -1,0 +1,85 @@
+\hypertarget{numMagician_8c}{}\doxysection{num\+Magician.\+c 文件参考}
+\label{numMagician_8c}\index{numMagician.c@{numMagician.c}}
+
+
+Main body program  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$libintl.\+h$>$}\newline
+{\ttfamily \#include $<$libgen.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+num\+Magician.\+c 的引用(Include)关系图\+:
+% FIG 0
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{numMagician_8c_ab92bb4161a6308b302d283816975c3a6}{\+\_\+}}(STRING)~gettext(STRING)
+\begin{DoxyCompactList}\small\item\em For translations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{numMagician_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{numMagician_8c_a0175bd7be11a83a55de3f3ce0afc35e3}{rmnm}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table of roman numbers from 1 to 100. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Main body program 
+
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{numMagician_8c_ab92bb4161a6308b302d283816975c3a6}\label{numMagician_8c_ab92bb4161a6308b302d283816975c3a6}} 
+\index{numMagician.c@{numMagician.c}!\_@{\_}}
+\index{\_@{\_}!numMagician.c@{numMagician.c}}
+\doxysubsubsection{\texorpdfstring{\_}{\_}}
+{\footnotesize\ttfamily \#define \+\_\+(\begin{DoxyParamCaption}\item[{}]{STRING }\end{DoxyParamCaption})~gettext(STRING)}
+
+
+
+For translations 
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{numMagician_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{numMagician_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{numMagician.c@{numMagician.c}!main@{main}}
+\index{main@{main}!numMagician.c@{numMagician.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+$<$ For number style\+: arabic or roman
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{numMagician_8c_a0175bd7be11a83a55de3f3ce0afc35e3}\label{numMagician_8c_a0175bd7be11a83a55de3f3ce0afc35e3}} 
+\index{numMagician.c@{numMagician.c}!rmnm@{rmnm}}
+\index{rmnm@{rmnm}!numMagician.c@{numMagician.c}}
+\doxysubsubsection{\texorpdfstring{rmnm}{rmnm}}
+{\footnotesize\ttfamily const char$\ast$ rmnm\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初始值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{"{}N"{}},\textcolor{stringliteral}{"{}I"{}},\textcolor{stringliteral}{"{}II"{}},\textcolor{stringliteral}{"{}III"{}},\textcolor{stringliteral}{"{}IV"{}},\textcolor{stringliteral}{"{}V"{}},\textcolor{stringliteral}{"{}VI"{}},\textcolor{stringliteral}{"{}VII"{}},\textcolor{stringliteral}{"{}VIII"{}},\textcolor{stringliteral}{"{}IX"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}X"{}},\textcolor{stringliteral}{"{}XI"{}},\textcolor{stringliteral}{"{}XII"{}},\textcolor{stringliteral}{"{}XIII"{}},\textcolor{stringliteral}{"{}XIV"{}},\textcolor{stringliteral}{"{}XV"{}},\textcolor{stringliteral}{"{}XVI"{}},\textcolor{stringliteral}{"{}XVII"{}},\textcolor{stringliteral}{"{}XVIII"{}},\textcolor{stringliteral}{"{}XIX"{}},\textcolor{stringliteral}{"{}XX"{}},\textcolor{stringliteral}{"{}XXI"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}XXII"{}},\textcolor{stringliteral}{"{}XXIII"{}},\textcolor{stringliteral}{"{}XXIV"{}},\textcolor{stringliteral}{"{}XXV"{}},\textcolor{stringliteral}{"{}XXVI"{}},\textcolor{stringliteral}{"{}XXVII"{}},\textcolor{stringliteral}{"{}XXVIII"{}},\textcolor{stringliteral}{"{}XXIX"{}},\textcolor{stringliteral}{"{}XXX"{}},\textcolor{stringliteral}{"{}XXXI"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}XXXII"{}},\textcolor{stringliteral}{"{}XXXIII"{}},\textcolor{stringliteral}{"{}XXXIV"{}},\textcolor{stringliteral}{"{}XXXV"{}},\textcolor{stringliteral}{"{}XXXVI"{}},\textcolor{stringliteral}{"{}XXXVII"{}},\textcolor{stringliteral}{"{}XXXVIII"{}},\textcolor{stringliteral}{"{}XXXIX"{}},\textcolor{stringliteral}{"{}XL"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}XLI"{}},\textcolor{stringliteral}{"{}XLII"{}},\textcolor{stringliteral}{"{}XLIII"{}},\textcolor{stringliteral}{"{}XLIV"{}},\textcolor{stringliteral}{"{}XLV"{}},\textcolor{stringliteral}{"{}XLVI"{}},\textcolor{stringliteral}{"{}XLVII"{}},\textcolor{stringliteral}{"{}XLVIII"{}},\textcolor{stringliteral}{"{}XLIX"{}},\textcolor{stringliteral}{"{}L"{}},\textcolor{stringliteral}{"{}LI"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}LII"{}},\textcolor{stringliteral}{"{}LIII"{}},\textcolor{stringliteral}{"{}LIV"{}},\textcolor{stringliteral}{"{}LV"{}},\textcolor{stringliteral}{"{}LVI"{}},\textcolor{stringliteral}{"{}LVII"{}},\textcolor{stringliteral}{"{}LVIII"{}},\textcolor{stringliteral}{"{}LIX"{}},\textcolor{stringliteral}{"{}LX"{}},\textcolor{stringliteral}{"{}LXI"{}},\textcolor{stringliteral}{"{}LXII"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}LXIII"{}},\textcolor{stringliteral}{"{}LXIV"{}},\textcolor{stringliteral}{"{}LXV"{}},\textcolor{stringliteral}{"{}LXVI"{}},\textcolor{stringliteral}{"{}LXVII"{}},\textcolor{stringliteral}{"{}LXVIII"{}},\textcolor{stringliteral}{"{}LXIX"{}},\textcolor{stringliteral}{"{}LXX"{}},\textcolor{stringliteral}{"{}LXXI"{}},\textcolor{stringliteral}{"{}LXXII"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}LXXIII"{}},\textcolor{stringliteral}{"{}LXXIV"{}},\textcolor{stringliteral}{"{}LXXV"{}},\textcolor{stringliteral}{"{}LXXVI"{}},\textcolor{stringliteral}{"{}LXXVII"{}},\textcolor{stringliteral}{"{}LXXVIII"{}},\textcolor{stringliteral}{"{}LXXIX"{}},\textcolor{stringliteral}{"{}LXXX"{}},\textcolor{stringliteral}{"{}LXXXI"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}LXXXII"{}},\textcolor{stringliteral}{"{}LXXXIII"{}},\textcolor{stringliteral}{"{}LXXXIV"{}},\textcolor{stringliteral}{"{}LXXXV"{}},\textcolor{stringliteral}{"{}LXXXVI"{}},\textcolor{stringliteral}{"{}LXXXVII"{}},\textcolor{stringliteral}{"{}LXXXVIII"{}},\textcolor{stringliteral}{"{}LXXXIX"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}XC"{}},\textcolor{stringliteral}{"{}XCI"{}},\textcolor{stringliteral}{"{}XCII"{}},\textcolor{stringliteral}{"{}XCIII"{}},\textcolor{stringliteral}{"{}XCIV"{}},\textcolor{stringliteral}{"{}XCV"{}},\textcolor{stringliteral}{"{}XCVI"{}},\textcolor{stringliteral}{"{}XCVII"{}},\textcolor{stringliteral}{"{}XCVIII"{}},\textcolor{stringliteral}{"{}XCIX"{}},\textcolor{stringliteral}{"{}C"{}}\}}
+
+\end{DoxyCode}
+
+
+Table of roman numbers from 1 to 100. 
+
+Python roman is used to generate this array. 
